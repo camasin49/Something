@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore Table Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile List</h1>
+        <table id="profileTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <form id="addForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <button type="submit">Add Profile</button>
+        </form>
+        <div id="profileDetails">
+            <h2>Profile Details</h2>
+            <p><strong>Name:</strong> <span id="detailsName"></span></p>
+            <p><strong>Age:</strong> <span id="detailsAge"></span></p>
+            <button id="updateBtn">Update</button>
+            <button id="deleteBtn">Delete</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
